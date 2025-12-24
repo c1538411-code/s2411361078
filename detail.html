@@ -4,19 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>商品詳情 - 婉瑜的 Kitty 小舖</title>
+
+  <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
-    /* 老師教的文字效果 */
-    dt { font-weight: bold; color: #ff1493; font-size: 1.2em; }
-    dd { line-height: 1.8; text-indent: 2em; letter-spacing: 1px; }
-    img { float: right; margin: 0 0 20px 20px; box-shadow: 3px 3px 5px rgba(0,0,0,0.3); }
+    body { font-family: "Microsoft JhengHei", sans-serif; }
+
+    h1 {
+      color: #ff69b4;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      letter-spacing: 2px;
+    }
+
+    h2 { color: #ff1493; margin-top: 20px; }
+
+    dt {
+      font-weight: bold;
+      color: #ff1493;
+      margin-top: 8px;
+    }
+
+    dd {
+      line-height: 1.8;
+      text-indent: 2em;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .product-img {
+      float: right;
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      margin: 0 0 15px 20px;
+      border-radius: 12px;
+      box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    }
+
+    .product-block {
+      border-bottom: 1px dashed #ffb6c1;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      overflow: auto; /* 清掉 float */
+    }
   </style>
 </head>
 <body>
-  <!-- 導覽列（相同） -->
+  <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html" style="color: #ff69b4; font-weight: bold;">🐱 婉瑜的 Kitty 小舖</a>
+      <a class="navbar-brand" href="index.html" style="color:#ff69b4; font-weight:bold;">🐱 婉瑜的 Kitty 小舖</a>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
         <li class="nav-item"><a class="nav-link" href="products.html">商品列表</a></li>
@@ -28,56 +66,64 @@
   </nav>
 
   <div class="container mt-5">
-    <h1 class="text-center mb-5" style="color: #ff69b4;">商品詳細介紹</h1>
+    <h1 class="text-center mb-4">商品詳細介紹</h1>
 
-    <!-- 商品 1：經典娃娃 -->
-    <div class="row mb-5">
-      <div class="col-md-8">
-        <h2>001 經典 Kitty 絨毛娃娃</h2>
-        <dl>
-          <dt>尺寸規格：</dt>
-          <dd>高度約 15 公分，坐姿最可愛！</dd>
-          
-          <dt>材質特色：</dt>
-          <dd>超柔軟韓國絨毛，觸感像抱雲朵一樣舒服。</dd>
-          
-          <dt>適合場合：</dt>
-          <dd>生日禮物、辦公桌擺飾、睡前抱抱伴侶。</dd>
-          
-          <dt>價格：</dt>
-          <dd><strong style="color: #ff1493; font-size: 1.5em;">$199</strong></dd>
-          
-          <dt>注意事項：</dt>
-          <dd>建議手洗，避免烘乾機。附獨立塑膠袋包裝，可直接送禮。</dd>
-        </dl>
-      </div>
-      <div class="col-md-4">
-        <img src="image.jpg" alt="經典 Kitty 娃娃" class="img-fluid" style="width: 100%; height: auto;">
-      </div>
-    </div>
+    <!-- 商品 1 -->
+    <section class="product-block">
+      <img src="p1-big.jpg" alt="經典 Kitty 絨毛娃娃" class="product-img">
+      <h2>001 經典 Kitty 絨毛娃娃</h2>
+      <dl>
+        <dt>尺寸規格</dt>
+        <dd>高度約 15 公分，坐姿設計，小小一隻剛好放在桌上或床頭。</dd>
 
-    <!-- 商品 2：馬克杯 -->
-    <div class="row mb-5">
-      <div class="col-md-8">
-        <h2>002 Kitty 陶瓷馬克杯</h2>
-        <dl>
-          <dt>容量規格：</dt>
-          <dd>350ml，適合喝咖啡或奶茶。</dd>
-          
-          <dt>材質特色：</dt>
-          <dd>高級陶瓷，耐熱不掉漆，可放微波爐。</dd>
-          
-          <dt>設計特色：</dt>
-          <dd>杯身有立體 Kitty 浮雕，握起來超有質感。</dd>
-          
-          <dt>價格：</dt>
-          <dd><strong style="color: #ff1493; font-size: 1.5em;">$150</strong></dd>
-        </dl>
-      </div>
-      <div class="col-md-4">
-        <img src="image.jpg" alt="Kitty 馬克杯" class="img-fluid" style="width: 100%; height: auto;">
-      </div>
-    </div>
+        <dt>材質特色</dt>
+        <dd>使用超柔軟絨毛布料，摸起來非常舒服，不容易掉毛。</dd>
+
+        <dt>適合對象</dt>
+        <dd>送給喜歡 Kitty 的朋友、當作生日禮物或自己收藏都很適合。</dd>
+
+        <dt>價格</dt>
+        <dd><strong style="color:#ff1493; font-size:1.4em;">$199</strong></dd>
+      </dl>
+    </section>
+
+    <!-- 商品 2 -->
+    <section class="product-block">
+      <img src="p2-big.jpg" alt="Kitty 陶瓷馬克杯" class="product-img">
+      <h2>002 Kitty 陶瓷馬克杯</h2>
+      <dl>
+        <dt>容量與尺寸</dt>
+        <dd>容量約 350ml，高度約 9 公分，日常喝水、咖啡、奶茶都剛剛好。</dd>
+
+        <dt>材質說明</dt>
+        <dd>高級陶瓷燒製，可微波、不易退色，外層有可愛 Kitty 圖案。</dd>
+
+        <dt>設計亮點</dt>
+        <dd>杯內邊緣印有小圖案，喝到最後一口也能看到 Kitty 跟你打招呼。</dd>
+
+        <dt>價格</dt>
+        <dd><strong style="color:#ff1493; font-size:1.4em;">$150</strong></dd>
+      </dl>
+    </section>
+
+    <!-- 商品 3 -->
+    <section class="product-block">
+      <img src="p3-big.jpg" alt="Kitty 大抱枕" class="product-img">
+      <h2>003 Kitty 大抱枕</h2>
+      <dl>
+        <dt>尺寸規格</dt>
+        <dd>約 40×40 公分，厚實蓬鬆，抱起來有安全感。</dd>
+
+        <dt>布料與填充物</dt>
+        <dd>外層為柔軟珊瑚絨，內部填充高彈性棉花，不易塌陷。</dd>
+
+        <dt>使用情境</dt>
+        <dd>放在床上、沙發或電腦椅上，追劇、打電動、睡覺都非常舒適。</dd>
+
+        <dt>價格</dt>
+        <dd><strong style="color:#ff1493; font-size:1.4em;">$380</strong></dd>
+      </dl>
+    </section>
   </div>
 </body>
 </html>
