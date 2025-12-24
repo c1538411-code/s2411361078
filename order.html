@@ -4,18 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>訂購表單 - 婉瑜的 Kitty 小舖</title>
+
+  <!-- Bootstrap 5（老師用的 CDN） -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
+    body { font-family: "Microsoft JhengHei", sans-serif; }
+
+    h1 {
+      color: #ff69b4;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      letter-spacing: 2px;
+    }
+
     .form-label { font-weight: bold; color: #ff1493; }
-    .form-control, select, textarea { border: 2px solid #ff69b4; }
-    .btn-submit { background-color: #ff1493; color: white; font-size: 1.2em; padding: 12px 30px; }
+
+    .form-control, select, textarea {
+      border: 2px solid #ffb6c1;
+    }
+
+    .btn-submit {
+      background-color: #ff1493;
+      color: white;
+      font-size: 1.1em;
+      padding: 10px 30px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #ff69b4;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    tr.odd  { background-color: #fff0f5; }
+    tr.even { background-color: #ffffff; }
+
+    caption {
+      caption-side: top;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #ff1493;
+    }
   </style>
 </head>
 <body>
-  <!-- 導覽列 -->
+  <!-- 導覽列（跟其他頁一樣即可） -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html" style="color: #ff69b4; font-weight: bold;">🐱 婉瑜的 Kitty 小舖</a>
+      <a class="navbar-brand" href="index.html" style="color:#ff69b4; font-weight:bold;">🐱 婉瑜的 Kitty 小舖</a>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
         <li class="nav-item"><a class="nav-link" href="products.html">商品列表</a></li>
@@ -27,70 +74,12 @@
   </nav>
 
   <div class="container mt-5">
-    <h1 class="text-center mb-5" style="color: #ff69b4;">訂購 / 詢問表單</h1>
-    
-    <!-- 老師教的 form -->
-    <form action="#" method="post" onsubmit="return validateForm()" class="row g-3">
-      <div class="col-md-6">
-        <label class="form-label">* 姓名</label>
-        <input type="text" class="form-control" name="name" required>
-      </div>
-      
-      <div class="col-md-6">
-        <label class="form-label">* 電子郵件</label>
-        <input type="email" class="form-control" name="email" required>
-      </div>
-      
-     <!-- 想購買的商品（可複選） -->
-<div class="col-12">
-  <label class="form-label">想購買的商品（可複選）</label>
+    <h1 class="text-center mb-4">訂購 / 詢問表單</h1>
+    <p class="text-center">
+      請先勾選想購買的商品，填寫數量後，再填寫下方聯絡資料，按送出即可。
+    </p>
 
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="products" id="p1" value="經典 Kitty 絨毛娃娃">
-    <label class="form-check-label" for="p1">經典 Kitty 絨毛娃娃（$199）</label>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="products" id="p2" value="Kitty 陶瓷馬克杯">
-    <label class="form-check-label" for="p2">Kitty 陶瓷馬克杯（$150）</label>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="products" id="p3" value="Kitty 大抱枕">
-    <label class="form-check-label" for="p3">Kitty 大抱枕（$380）</label>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="products" id="p4" value="Kitty 鑰匙圈">
-    <label class="form-check-label" for="p4">Kitty 鑰匙圈（$80）</label>
-  </div>
-</div>
-
-      
-      <div class="col-md-6">
-        <label class="form-label">購買數量</label>
-        <input type="number" class="form-control" name="quantity" min="1" value="1">
-      </div>
-      
-      <div class="col-md-6">
-        <label class="form-label">付款方式</label>
-        <div>
-          <input type="radio" name="payment" value="transfer" id="transfer"> <label for="transfer">銀行匯款</label><br>
-          <input type="radio" name="payment" value="meetup" id="meetup"> <label for="meetup">台中面交</label>
-        </div>
-      </div>
-      
-      <div class="col-12">
-        <label class="form-label">備註（選填）</label>
-        <textarea class="form-control" name="message" rows="4" placeholder="特殊需求、想要的顏色、預計取貨時間..."></textarea>
-      </div>
-      
-      <div class="col-12 text-center">
-        <input type="submit" value="送出訂單" class="btn btn-submit me-3">
-        <input type="reset" value="重新填寫" class="btn btn-secondary">
-      </div>
-    </form>
-  </div>
+    <!--
 
   <script src="01.js"></script>
 </body>
