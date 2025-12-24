@@ -79,8 +79,83 @@
       請先勾選想購買的商品，填寫數量後，再填寫下方聯絡資料，按送出即可。
     </p>
 
-    <!--
+    <!-- 訂購表單開始 -->
+    <form action="#" method="post" onsubmit="return validateForm()">
 
+      <!-- 商品區：每個商品有自己的數量 -->
+      <table>
+        <caption>請勾選想購買的商品與數量</caption>
+        <thead>
+          <tr>
+            <th>選擇</th>
+            <th>商品名稱</th>
+            <th>價格</th>
+            <th>數量</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="odd">
+            <td><input type="checkbox" name="p1_checked"></td>
+            <td>001 經典 Kitty 絨毛娃娃</td>
+            <td>$199</td>
+            <td><input type="number" name="p1_qty" min="0" value="0"></td>
+          </tr>
+          <tr class="even">
+            <td><input type="checkbox" name="p2_checked"></td>
+            <td>002 Kitty 陶瓷馬克杯</td>
+            <td>$150</td>
+            <td><input type="number" name="p2_qty" min="0" value="0"></td>
+          </tr>
+          <tr class="odd">
+            <td><input type="checkbox" name="p3_checked"></td>
+            <td>003 Kitty 大抱枕</td>
+            <td>$380</td>
+            <td><input type="number" name="p3_qty" min="0" value="0"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 聯絡資訊 -->
+      <div class="row g-3 mt-4">
+        <div class="col-md-6">
+          <label class="form-label">* 姓名</label>
+          <input type="text" class="form-control" name="name">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">* 電子郵件</label>
+          <input type="email" class="form-control" name="email">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">聯絡電話</label>
+          <input type="text" class="form-control" name="phone">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">付款方式</label><br>
+          <input type="radio" id="pay1" name="payment" value="transfer">
+          <label for="pay1">銀行匯款</label>
+          &nbsp;&nbsp;
+          <input type="radio" id="pay2" name="payment" value="meetup">
+          <label for="pay2">台中面交</label>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label">備註（選填）</label>
+          <textarea class="form-control" name="message" rows="4"
+            placeholder="例如：希望什麼時候取貨、顏色需求…"></textarea>
+        </div>
+
+        <div class="col-12 text-center mt-4">
+          <input type="submit" value="送出訂單" class="btn btn-submit me-3">
+          <input type="reset" value="重新填寫" class="btn btn-secondary">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- 連結到老師等級的簡單 JS 驗證 -->
   <script src="01.js"></script>
 </body>
 </html>
