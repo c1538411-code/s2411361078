@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>訂購表單 - 婉瑜的 Kitty 小舖</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .form-label { font-weight: bold; color: #ff1493; }
+    .form-control, select, textarea { border: 2px solid #ff69b4; }
+    .btn-submit { background-color: #ff1493; color: white; font-size: 1.2em; padding: 12px 30px; }
+  </style>
+</head>
+<body>
+  <!-- 導覽列 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color: #ff69b4; font-weight: bold;">🐱 婉瑜的 Kitty 小舖</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">商品列表</a></li>
+        <li class="nav-item"><a class="nav-link" href="detail.html">商品詳情</a></li>
+        <li class="nav-item"><a class="nav-link active" href="order.html">訂購表單</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">關於小舖</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-5" style="color: #ff69b4;">訂購 / 詢問表單</h1>
+    
+    <!-- 老師教的 form -->
+    <form action="#" method="post" onsubmit="return validateForm()" class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label">* 姓名</label>
+        <input type="text" class="form-control" name="name" required>
+      </div>
+      
+      <div class="col-md-6">
+        <label class="form-label">* 電子郵件</label>
+        <input type="email" class="form-control" name="email" required>
+      </div>
+      
+      <div class="col-12">
+        <label class="form-label">想購買的商品</label>
+        <select class="form-control" name="product">
+          <option value="">請選擇...</option>
+          <option value="001">001 經典 Kitty 絨毛娃娃 ($199)</option>
+          <option value="002">002 Kitty 陶瓷馬克杯 ($150)</option>
+          <option value="003">003 Kitty 大抱枕 ($380)</option>
+          <option value="004">004 Kitty 手機殼 ($250)</option>
+        </select>
+      </div>
+      
+      <div class="col-md-6">
+        <label class="form-label">購買數量</label>
+        <input type="number" class="form-control" name="quantity" min="1" value="1">
+      </div>
+      
+      <div class="col-md-6">
+        <label class="form-label">付款方式</label>
+        <div>
+          <input type="radio" name="payment" value="transfer" id="transfer"> <label for="transfer">銀行匯款</label><br>
+          <input type="radio" name="payment" value="meetup" id="meetup"> <label for="meetup">台中面交</label>
+        </div>
+      </div>
+      
+      <div class="col-12">
+        <label class="form-label">備註（選填）</label>
+        <textarea class="form-control" name="message" rows="4" placeholder="特殊需求、想要的顏色、預計取貨時間..."></textarea>
+      </div>
+      
+      <div class="col-12 text-center">
+        <input type="submit" value="送出訂單" class="btn btn-submit me-3">
+        <input type="reset" value="重新填寫" class="btn btn-secondary">
+      </div>
+    </form>
+  </div>
+
+  <script src="01.js"></script>
+</body>
+</html>
