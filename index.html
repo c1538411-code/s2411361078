@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>婉瑜的 Kitty 小舖 - 首頁</title>
+  <!-- Bootstrap 5 CDN，老師給的 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* 老師教的 CSS */
+    body { font-family: 'Microsoft JhengHei', sans-serif; }
+    .pink-text { color: #ff69b4; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+    .navbar-brand { font-size: 1.5em; font-weight: bold; letter-spacing: 2px; }
+  </style>
+</head>
+<body>
+  <!-- 導覽列 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand pink-text" href="index.html">🐱 婉瑜的 Kitty 小舖</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">商品列表</a></li>
+        <li class="nav-item"><a class="nav-link" href="detail.html">商品詳情</a></li>
+        <li class="nav-item"><a class="nav-link" href="order.html">訂購表單</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">關於小舖</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <!-- Bootstrap Grid -->
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="pink-text text-center mb-4">歡迎來到婉瑜的 Kitty 小舖！</h1>
+        <p class="lead text-center mb-4" style="line-height: 1.8; text-indent: 2em;">
+          這裡販售各種超可愛的 Hello Kitty 周邊商品，包括絨毛娃娃、陶瓷馬克杯、抱枕等。
+          所有商品都是精選優質，適合送禮或自己收藏！
+        </p>
+        <div class="text-center">
+          <!-- 你上傳的圖片 -->
+          <img src="image.jpg" alt="Kitty 小舖" class="img-fluid rounded" style="max-height: 400px;">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3 class="pink-text">快速導覽</h3>
+        <ul style="line-height: 2;">
+          <li><a href="products.html">📋 查看完整商品列表</a></li>
+          <li><a href="order.html">✍️ 填寫訂購表單</a></li>
+          <li><a href="about.html">ℹ️ 了解購買流程</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
