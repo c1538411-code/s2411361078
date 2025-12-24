@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於小舖 - 婉瑜的 Kitty 小舖</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* 老師教的 float 排版 */
+    .main { float: left; width: 70%; padding-right: 20px; }
+    .aside { float: right; width: 25%; }
+    .clearfix::after { content: ""; display: table; clear: both; }
+    mark { background-color: #ffeb3b; }
+  </style>
+</head>
+<body>
+  <!-- 導覽列 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color: #ff69b4; font-weight: bold;">🐱 婉瑜的 Kitty 小舖</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">商品列表</a></li>
+        <li class="nav-item"><a class="nav-link" href="detail.html">商品詳情</a></li>
+        <li class="nav-item"><a class="nav-link" href="order.html">訂購表單</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">關於小舖</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5 clearfix">
+    <header style="text-align: center; margin-bottom: 40px;">
+      <h1 style="color: #ff69b4;">關於婉瑜的 Kitty 小舖</h1>
+    </header>
+
+    <main class="main">
+      <section>
+        <h3>購買流程（5 步驟）</h3>
+        <ol style="line-height: 2;">
+          <li>瀏覽 <a href="products.html">商品列表頁</a>，找到喜歡的商品</li>
+          <li>記下商品編號與名稱</li>
+          <li>填寫 <a href="order.html">訂購表單</a></li>
+          <li>等待婉瑜回覆確認（通常 24 小時內）</li>
+          <li>依指示付款並安排取貨</li>
+        </ol>
+      </section>
+
+      <section class="mt-5">
+        <h3>營運資訊</h3>
+        <ul style="line-height: 2;">
+          <li><strong>營業時間：</strong>週一至週五 10:00-20:00</li>
+          <li><strong>取貨地點：</strong>台中市西屯區</li>
+          <li><strong>運費：</strong>台中市區面交免運，超商取貨全台 $60</li>
+        </ul>
+      </section>
+    </main>
+
+    <aside class="aside">
+      <h4 style="color: #ff1493;">常見問題</h4>
+      <dl>
+        <dt>可以退換貨嗎？</dt>
+        <dd>未開封包裝可退換，運費自付。</dd>
+        
+        <dt>什麼時候能收到貨？</dt>
+        <dd>面交 1-2 天，宅配 3-5 天。</dd>
+        
+        <dt>有現貨嗎？</dt>
+        <dd>表單送出後會確認庫存，缺貨會通知。</dd>
+      </dl>
+      
+      <p><mark>創立時間：</mark> <time datetime="2025-10-01">2025年10月</time></p>
+    </aside>
+  </div>
+</body>
+</html>
