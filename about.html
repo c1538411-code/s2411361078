@@ -2,29 +2,41 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>婉瑜的 Kitty 小舖 - 關於小舖</title>
   <style>
     body { font-family:"Microsoft JhengHei",sans-serif; background:#fff5fb; margin:0; }
-    header, nav, main, aside, footer { padding:10px 20px; }
-    header { background:#ffc0dd; text-align:center; }
-    nav { background:#ffe4f2; text-align:center; }
-    nav a { margin:0 8px; text-decoration:none; color:#c2185b; }
-    nav a:hover { text-decoration:underline; }
-    h2, h3 { color:#c2185b; }
-    .wrap { overflow:hidden; }
-    main { float:left; width:65%; }
-    aside { float:right; width:30%; background:#ffffff; border-left:1px solid #ffb6da; }
+
+    header { background:#ffc0dd; text-align:center; padding:22px 20px; border-bottom:3px solid #ff8db8; }
+    header h1 { margin:0; color:#c2185b; font-size:32px; }
+    header p { margin:10px 0 0; color:#7a2a4a; font-size:14px; }
+
+    nav { background:#ffe4f2; text-align:center; padding:12px 10px; border-bottom:2px solid #ffb1cf; }
+    nav a { display:inline-block; background:#ffd0e5; color:#c2185b; text-decoration:none; padding:10px 18px; margin:0 6px;
+            border:1px solid #ff8db8; border-radius:6px; font-weight:bold; font-size:14px; }
+    nav a:hover { background:#ffb7d4; }
+    nav a.active { background:#ff8db8; color:#fff; }
+
+    .wrap { max-width:980px; margin:0 auto; padding:30px 20px 60px; overflow:hidden; }
+    h2, h3 { color:#c2185b; margin:0 0 10px; }
+    hr.line { border:none; border-top:2px solid #ffb1cf; margin:12px 0 18px; }
+
+    main { float:left; width:65%; background:#fff; border:1px solid #ffb6da; border-radius:10px; padding:16px; box-sizing:border-box; }
+    aside { float:right; width:30%; background:#fff; border:1px solid #ffb6da; border-radius:10px; padding:16px; box-sizing:border-box; }
+
     ol { padding-left:20px; }
-    dt { font-weight:bold; margin-top:6px; }
-    dd { margin-left:0; text-indent:2em; }
+    dt { font-weight:bold; margin-top:10px; }
+    dd { margin-left:0; text-indent:2em; margin-top:4px; }
     mark { background:#ffdeee; }
-    footer { clear:both; text-align:center; background:#ffc0dd; font-size:14px; }
+
+    footer { background:#ffc0dd; border-top:3px solid #ff8db8; padding:14px 20px; font-size:13px; color:#6b2b47; }
   </style>
 </head>
 <body>
+
 <header>
-  <h1>關於小舖</h1>
-  <p>背景故事、購買流程與常見問題。</p>
+  <h1>婉瑜的 Kitty 小舖</h1>
+  <p>收集 10 年，分享我的 Kitty 小世界。</p>
 </header>
 
 <nav>
@@ -32,12 +44,13 @@
   <a href="products.html">商品列表</a>
   <a href="detail.html">商品詳情</a>
   <a href="order.html">訂購表單</a>
-  <a href="about.html">關於小舖</a>
+  <a class="active" href="about.html">關於小舖</a>
 </nav>
 
 <div class="wrap">
   <main>
-    <h2>小舖的由來</h2>
+    <h2>關於小舖：背景故事</h2>
+    <hr class="line">
     <p>
       「婉瑜的 Kitty 小舖」從一個單純的個人收藏開始，從國小就喜歡 Hello Kitty，
       到現在已經有超過十年的時間。為了讓這些回憶被好好保存，也方便未來有需要時使用，
@@ -50,30 +63,10 @@
       <li>對有興趣的商品，到「商品詳情」閱讀更完整的介紹。</li>
       <li>在「訂購表單」中填寫想要的商品編號、數量與聯絡方式。</li>
       <li>店主看到表單後，會透過 Email 回覆並確認細節。</li>
-      <li>確認完成後，再安排轉帳或台中面交，最後送上一句感謝訊息。</li>
+      <li>確認完成後，再安排轉帳或台中面交。</li>
     </ol>
   </main>
 
   <aside>
     <h3>常見問題 FAQ</h3>
-    <dl>
-      <dt>商品都有實體嗎？</dt>
-      <dd>有，都是店主目前的實際收藏，主要以展示與分享為主。</dd>
-
-      <dt>可以面交嗎？</dt>
-      <dd>可以，以 <mark>台中面交</mark> 最方便，時間與地點會在聯絡時再協調。</dd>
-
-      <dt>如果要寄送，運費怎麼算？</dt>
-      <dd>暫定以超商寄件為主，運費大約 <mark>60 元</mark> 左右，實際金額以寄出時為準。</dd>
-
-      <dt>之後會固定販售嗎？</dt>
-      <dd>目前以分享與記錄為主，如果未來真的開始販售，會在網站上公告最新消息。</dd>
-    </dl>
-  </aside>
-</div>
-
-<footer>
-  <p>© 2026 婉瑜的 Kitty 小舖</p>
-</footer>
-</body>
-</html>
+    <hr class="line">
