@@ -4,46 +4,123 @@
   <meta charset="UTF-8">
   <title>婉瑜的 Kitty 小舖 - 關於小舖</title>
   <style>
-    body { font-family:"Microsoft JhengHei",sans-serif; background:#fff5fb; margin:0; }
-    header, nav, footer { padding:10px 20px; }
-    header { background:#ffc0dd; text-align:center; }
-    nav { background:#ffe4f2; text-align:center; border-top:2px solid #ff9cc8; }
-    nav a { margin:0 8px; text-decoration:none; color:#c2185b; }
-    nav a:hover { text-decoration:underline; }
-
-    /* 讓內容像截圖那樣變窄、置中 */
-    .container { width: 900px; max-width: 92%; margin: 0 auto; padding: 18px 0 30px; }
-
-    h2 { color:#c2185b; margin: 18px 0 6px; }
-    h3 { color:#c2185b; margin: 16px 0 6px; }
-
-    /* 章節上方那條細線 */
-    .title-line { border-bottom:2px solid #ff9cc8; padding-bottom:10px; }
-
-    p { line-height:1.9; }
-
-    /* 兩欄：main + aside（老師教過 float 可以用） */
-    .wrap { overflow:hidden; margin-top: 14px; }
-    main { float:left; width:65%; }
-    aside { float:right; width:30%; }
-
-    /* 內文區塊做出截圖那種「乾淨白底」感 */
-    .card {
-      background:#ffffff;
-      border:1px solid #ffb6da;
-      padding:14px 16px;
-      border-radius:8px;
+    body {
+      font-family:"Microsoft JhengHei",sans-serif;
+      background:#fff5fb;
+      margin:0;
     }
 
-    ol { padding-left:20px; line-height:1.9; }
-    mark { background:#ffdeee; }
+    header, footer {
+      padding:10px 20px;
+    }
 
-    /* FAQ Q 的樣式 */
-    .faq dt { font-weight:bold; margin-top:10px; color:#c2185b; }
-    .faq dt span { color:#c2185b; }
-    .faq dd { margin:6px 0 12px; line-height:1.8; }
+    header {
+      background:#ffc0dd;
+      text-align:center;
+    }
 
-    footer {
+    /* 🔴 方框導覽列 */
+    nav{
+      background:#ffe4f2;
+      text-align:center;
+      padding:12px 10px;
+      border-top:2px solid #ff9cc8;
+      border-bottom:2px solid #ff9cc8;
+    }
+
+    nav a{
+      display:inline-block;
+      background:#ffd0e5;
+      color:#c2185b;
+      text-decoration:none;
+      padding:10px 18px;
+      margin:0 6px;
+      border:1px solid #ff8db8;
+      border-radius:6px;
+      font-weight:bold;
+      font-size:14px;
+    }
+
+    nav a:hover{
+      background:#ffb7d4;
+    }
+
+    nav a.active{
+      background:#ff8db8;
+      color:#ffffff;
+    }
+
+    /* 主要內容寬度 */
+    .container{
+      width:900px;
+      max-width:92%;
+      margin:0 auto;
+      padding:20px 0 40px;
+    }
+
+    h2, h3{
+      color:#c2185b;
+      margin-top:18px;
+    }
+
+    .title-line{
+      border-bottom:2px solid #ff9cc8;
+      padding-bottom:8px;
+      margin-bottom:14px;
+    }
+
+    p{
+      line-height:1.9;
+    }
+
+    /* 兩欄版型（老師教過 float） */
+    .wrap{
+      overflow:hidden;
+      margin-top:16px;
+    }
+
+    main{
+      float:left;
+      width:65%;
+    }
+
+    aside{
+      float:right;
+      width:30%;
+    }
+
+    /* 白色方框卡片 */
+    .card{
+      background:#ffffff;
+      border:1px solid #ffb6da;
+      border-radius:8px;
+      padding:14px 16px;
+      margin-bottom:16px;
+    }
+
+    ol{
+      padding-left:20px;
+      line-height:1.9;
+    }
+
+    mark{
+      background:#ffdeee;
+    }
+
+    /* FAQ */
+    .faq dt{
+      font-weight:bold;
+      color:#c2185b;
+      margin-top:10px;
+    }
+
+    .faq dd{
+      margin:6px 0 12px;
+      line-height:1.8;
+    }
+
+    footer{
+      clear:both;
       text-align:center;
       background:#ffc0dd;
       font-size:14px;
@@ -52,6 +129,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -64,7 +142,7 @@
   <a href="products.html">商品列表</a>
   <a href="detail.html">商品詳情</a>
   <a href="order.html">訂購表單</a>
-  <a href="about.html">關於小舖</a>
+  <a class="active" href="about.html">關於小舖</a>
 </nav>
 
 <div class="container">
@@ -73,42 +151,47 @@
   <div class="wrap">
     <main>
       <h3>小舖背景</h3>
-      <p class="card">
-        「婉瑜的 Kitty 小舖」是一個以個人 Kitty 收藏為主題的小舖。我從國小開始喜歡 Kitty，
-        已經收集了超過十年。這個網站就是用來整理與分享這些寶貝的地方。
-      </p>
+      <div class="card">
+        <p>
+          「婉瑜的 Kitty 小舖」是一個以個人 Kitty 收藏為主題的小舖。
+          我從國小開始喜歡 Hello Kitty，已經收集了超過十年。
+          這個網站是用來整理與分享這些寶貝的地方。
+        </p>
+      </div>
 
       <h3>購買流程</h3>
       <div class="card">
         <ol>
-          <li>在「商品列表」頁面瀏覽所有可選擇的 Kitty 商品。</li>
-          <li>對某些商品有興趣時，可以到「商品詳情」頁面看更完整的介紹。</li>
-          <li>決定好要選購的商品後，用「訂購表單」填寫姓名、Email、商品編號和數量。</li>
-          <li>提交表單後，我會透過 Email 與你聯絡，確認購買需求。</li>
-          <li>完成交易後，我會傳送感謝訊息，並安排後續的面交或寄送方式。</li>
+          <li>先到「商品列表」瀏覽所有商品與編號。</li>
+          <li>對有興趣的商品，到「商品詳情」查看更完整介紹。</li>
+          <li>在「訂購表單」填寫商品編號、數量與聯絡方式。</li>
+          <li>提交後，我會透過 Email 聯絡確認需求。</li>
+          <li>確認完成後，再安排轉帳或台中面交。</li>
         </ol>
       </div>
     </main>
 
     <aside>
-      <h3>常見問題</h3>
+      <h3>常見問題 FAQ</h3>
       <div class="card">
         <dl class="faq">
-          
-          <dt><span>Q：</span>目前可以購買嗎？</dt>
-          <dd>目前主要是展示與記錄收藏。如果你真的感興趣，可以透過表單聯絡我，我們再另外討論。</dd>
+          <dt>Q：這些 Kitty 商品都是實品嗎？</dt>
+          <dd>是的，網站上展示的商品都是我實際收藏的實品。</dd>
 
-          <dt><span>Q：</span>可以看實品嗎？</dt>
-          <dd>如果是在 <mark>台中</mark> 附近的朋友，可以安排面交時看實品；其他地區的朋友可以先透過照片與詳細說明了解。</dd>
+          <dt>Q：目前可以購買嗎？</dt>
+          <dd>目前以展示與記錄為主，如有興趣可透過訂購表單聯絡我。</dd>
 
-          <dt><span>Q：</span>運費怎麼計算？</dt>
-          <dd>如果要寄送商品，暫定以超商寄件為主，運費大約 <mark>60 元左右</mark>；台中面交則免運費。</dd>
+          <dt>Q：可以面交嗎？</dt>
+          <dd>可以，<mark>台中面交</mark>最方便，時間地點可再討論。</dd>
 
-          <dt><span>Q：</span>有退換貨政策嗎？</dt>
-          <dd>目前還沒有正式的商業行為，所以相關細節可以在聯絡時再一起討論。</dd>
+          <dt>Q：寄送運費怎麼算？</dt>
+          <dd>以超商寄件為主，運費大約 <mark>60 元左右</mark>。</dd>
 
-          <dt><span>Q：</span>為什麼要建這個網站？</dt>
-          <dd>我想把十年的 Kitty 愛好好整理和分享，同時也當作自己的學習專案，練習網頁設計的技巧。</dd>
+          <dt>Q：為什麼要做這個網站？</dt>
+          <dd>
+            我想把多年的 Kitty 收藏好好整理分享，
+            同時也當作練習網頁設計的學習作品。
+          </dd>
         </dl>
       </div>
     </aside>
@@ -121,3 +204,4 @@
 
 </body>
 </html>
+
