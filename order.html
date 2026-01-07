@@ -2,23 +2,38 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>婉瑜的 Kitty 小舖 - 訂購表單</title>
   <style>
     body { font-family:"Microsoft JhengHei",sans-serif; background:#fff5fb; margin:0; }
-    header, nav, main, footer { padding:10px 20px; }
-    header { background:#ffc0dd; text-align:center; }
-    nav { background:#ffe4f2; text-align:center; }
-    nav a { margin:0 8px; text-decoration:none; color:#c2185b; }
-    nav a:hover { text-decoration:underline; }
-    h2 { color:#c2185b; }
-    form { background:#ffffff; border:1px solid #ffb6da; padding:10px; max-width:500px; margin:10px auto; }
+
+    header { background:#ffc0dd; text-align:center; padding:22px 20px; border-bottom:3px solid #ff8db8; }
+    header h1 { margin:0; color:#c2185b; font-size:32px; }
+    header p { margin:10px 0 0; color:#7a2a4a; font-size:14px; }
+
+    nav { background:#ffe4f2; text-align:center; padding:12px 10px; border-bottom:2px solid #ffb1cf; }
+    nav a { display:inline-block; background:#ffd0e5; color:#c2185b; text-decoration:none; padding:10px 18px; margin:0 6px;
+            border:1px solid #ff8db8; border-radius:6px; font-weight:bold; font-size:14px; }
+    nav a:hover { background:#ffb7d4; }
+    nav a.active { background:#ff8db8; color:#fff; }
+
+    main { max-width:980px; margin:0 auto; padding:30px 20px 60px; }
+    h2 { color:#c2185b; margin:0 0 10px; }
+    hr.line { border:none; border-top:2px solid #ffb1cf; margin:12px 0 18px; }
+
+    form { background:#fff; border:1px solid #ffb6da; padding:18px; max-width:760px; margin:10px auto; border-radius:10px; }
     label { display:inline-block; width:90px; }
-    input[type="text"], input[type="email"], input[type="number"], select, textarea {
-      width:60%; margin-bottom:6px;
-    }
-    textarea { height:60px; }
+    input[type="text"], input[type="email"], input[type="number"], select, textarea { width:70%; margin-bottom:10px; padding:8px; border:1px solid #ffb6da; border-radius:6px; }
+    textarea { height:80px; }
     .btns { text-align:center; margin-top:10px; }
+    .btns input { padding:10px 18px; border:0; border-radius:6px; cursor:pointer; }
+    .btns input[type="submit"] { background:#ff8db8; color:#fff; }
+    .btns input[type="reset"] { background:#ddd; }
+    .btns input:hover { opacity:0.9; }
+
+    footer { background:#ffc0dd; border-top:3px solid #ff8db8; padding:14px 20px; font-size:13px; color:#6b2b47; }
   </style>
+
   <script>
     function checkForm() {
       var n = document.getElementById("name").value;
@@ -32,48 +47,41 @@
   </script>
 </head>
 <body>
+
 <header>
-  <h1>訂購表單</h1>
-  <p>在線上勾選想要的商品，填好資料一次送出。</p>
+  <h1>婉瑜的 Kitty 小舖</h1>
+  <p>收集 10 年，分享我的 Kitty 小世界。</p>
 </header>
 
 <nav>
   <a href="index.html">首頁</a>
   <a href="products.html">商品列表</a>
   <a href="detail.html">商品詳情</a>
-  <a href="order.html">訂購表單</a>
+  <a class="active" href="order.html">訂購表單</a>
   <a href="about.html">關於小舖</a>
 </nav>
 
 <main>
-  <h2>填寫訂購需求</h2>
-  <p>
-    客人可以在網站上勾選想購買的商品與數量，留下基本聯絡方式，
-    一次送出，不用再透過多次私訊詢問。
-  </p>
+  <h2>訂購表單：線上聯絡表</h2>
+  <hr class="line">
+
+  <p>如果你對某些商品感興趣，或想要進一步了解，可以透過下方表單填寫你的需求。</p>
 
   <form onsubmit="return checkForm();">
-    <p>
-      <label for="name">姓名：</label>
-      <input type="text" id="name" name="name">
-    </p>
-    <p>
-      <label for="email">Email：</label>
-      <input type="email" id="email" name="email">
-    </p>
+    <p><label for="name">姓名：</label><input type="text" id="name" name="name"></p>
+    <p><label for="email">Email：</label><input type="email" id="email" name="email"></p>
     <p>
       <label for="item">商品編號：</label>
       <select id="item" name="item">
+        <option value="">-- 請選擇 --</option>
         <option value="K001">K001 紅色 Kitty 鑰匙圈</option>
         <option value="K002">K002 粉色 Kitty 原子筆</option>
         <option value="K003">K003 Kitty 小公仔</option>
         <option value="K006">K006 Kitty 馬克杯</option>
       </select>
     </p>
-    <p>
-      <label for="qty">數量：</label>
-      <input type="number" id="qty" name="qty" value="1" min="1">
-    </p>
+    <p><label for="qty">數量：</label><input type="number" id="qty" name="qty" value="1" min="1"></p>
+
     <p>
       <span style="display:inline-block;width:90px;">付款方式：</span>
       <input type="radio" id="pay1" name="pay" value="轉帳" checked>
@@ -81,19 +89,19 @@
       <input type="radio" id="pay2" name="pay" value="面交">
       <label for="pay2">面交</label>
     </p>
-    <p>
-      <label for="memo">備註：</label>
-      <textarea id="memo" name="memo"></textarea>
-    </p>
+
+    <p><label for="memo">備註：</label><textarea id="memo" name="memo" placeholder="有任何疑問或特殊需求都可以在這裡留言"></textarea></p>
+
     <div class="btns">
-      <input type="submit" value="送出訂購">
+      <input type="submit" value="送出表單">
       <input type="reset" value="重新填寫">
     </div>
   </form>
 </main>
 
 <footer>
-  <p>© 2026 婉瑜的 Kitty 小舖</p>
+  © 2026 婉瑜的 Kitty 小舖｜用心收藏，細心分享
 </footer>
+
 </body>
 </html>
