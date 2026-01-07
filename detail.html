@@ -2,21 +2,94 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>婉瑜的 Kitty 小舖 - 商品詳情</title>
+
   <style>
-    body { font-family:"Microsoft JhengHei",sans-serif; background:#fff5fb; margin:0; }
-    header, nav, main, footer { padding:10px 20px; }
-    header { background:#ffc0dd; text-align:center; }
-    nav { background:#ffe4f2; text-align:center; }
-    nav a { margin:0 8px; text-decoration:none; color:#c2185b; }
-    nav a:hover { text-decoration:underline; }
-    h2, h3 { color:#c2185b; }
-    dl { margin-bottom:15px; }
-    dt { font-weight:bold; margin-top:5px; }
-    dd { margin-left:0; text-indent:2em; }
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      background: #fff5fb;
+      margin: 0;
+    }
+
+    header, nav, main, footer {
+      padding: 10px 20px;
+    }
+
+    header {
+      background: #ffc0dd;
+      text-align: center;
+    }
+
+    nav {
+      background: #ffe4f2;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #c2185b;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h2, h3 {
+      color: #c2185b;
+    }
+
+    /* ⭐ 商品區塊排版 */
+    .product {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+      align-items: flex-start;
+    }
+
+    .product-text {
+      flex: 2;
+    }
+
+    .product-img {
+      flex: 1;
+      text-align: center;
+    }
+
+    .product-img img {
+      width: 100%;
+      max-width: 200px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #ffffff;
+    }
+
+    dl {
+      margin-bottom: 15px;
+    }
+
+    dt {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    dd {
+      margin-left: 0;
+      text-indent: 2em;
+    }
+
+    footer {
+      text-align: center;
+      background: #ffc0dd;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
+
 <header>
   <h1>商品詳情</h1>
   <p>每個主打商品都有自己的大照片與文字說明。</p>
@@ -33,49 +106,68 @@
 <main>
   <h2>主打商品介紹</h2>
   <p>
-    當客人對某些商品有興趣時，可以在這一頁看到更詳細的介紹，而不是只看到名稱和價格。
+    當客人對某些商品有興趣時，可以在這一頁看到更詳細的介紹，
+    而不是只看到名稱和價格。
   </p>
 
-  <section>
-    <h3>K001 紅色 Kitty 鑰匙圈</h3>
-    <dl>
-      <dt>尺寸</dt>
-      <dd>約 3 公分，小巧輕便，掛在鑰匙或包包上都很合適。</dd>
-      <dt>材質</dt>
-      <dd>塑膠與金屬鑰匙圈，顏色飽和，不容易退色。</dd>
-      <dt>使用情境</dt>
-      <dd>適合日常出門使用，幫平凡的鑰匙增加一點可愛的亮點。</dd>
-      <dt>價格</dt>
-      <dd>參考價格 $150。</dd>
-    </dl>
+  <!-- 商品 1 -->
+  <section class="product">
+    <div class="product-text">
+      <h3>K001 紅色 Kitty 鑰匙圈</h3>
+      <dl>
+        <dt>尺寸</dt>
+        <dd>約 3 公分，小巧輕便，掛在鑰匙或包包上都很合適。</dd>
+        <dt>材質</dt>
+        <dd>塑膠與金屬鑰匙圈，顏色飽和，不容易退色。</dd>
+        <dt>使用情境</dt>
+        <dd>適合日常出門使用，幫平凡的鑰匙增加一點可愛的亮點。</dd>
+        <dt>價格</dt>
+        <dd>參考價格 $150。</dd>
+      </dl>
+    </div>
+    <div class="product-img">
+      <img src="images/kitty2.jpg" alt="紅色 Kitty 鑰匙圈">
+    </div>
   </section>
 
-  <section>
-    <h3>K003 Kitty 小公仔</h3>
-    <dl>
-      <dt>尺寸</dt>
-      <dd>高度約 6 公分，剛好可以放在桌面角落。</dd>
-      <dt>材質</dt>
-      <dd>塑膠公仔，表面塗裝細緻。</dd>
-      <dt>使用情境</dt>
-      <dd>可以擺在書桌、電腦螢幕旁或床頭櫃，陪你一起讀書和休息。</dd>
-      <dt>價格</dt>
-      <dd>參考價格 $200。</dd>
-    </dl>
+  <!-- 商品 2 -->
+  <section class="product">
+    <div class="product-text">
+      <h3>K003 Kitty 小公仔</h3>
+      <dl>
+        <dt>尺寸</dt>
+        <dd>高度約 6 公分，剛好可以放在桌面角落。</dd>
+        <dt>材質</dt>
+        <dd>塑膠公仔，表面塗裝細緻。</dd>
+        <dt>使用情境</dt>
+        <dd>可以擺在書桌、電腦螢幕旁或床頭櫃，陪你一起讀書和休息。</dd>
+        <dt>價格</dt>
+        <dd>參考價格 $200。</dd>
+      </dl>
+    </div>
+    <div class="product-img">
+      <img src="images/kitty3.jpg" alt="Kitty 小公仔">
+    </div>
   </section>
 
-  <section>
-    <h3>K006 Kitty 馬克杯</h3>
-    <dl>
-      <dt>尺寸</dt>
-      <dd>容量約 350 ml，早上喝牛奶或飲料都足夠。</dd>
-      <dt>材質</dt>
-      <dd>陶瓷材質，杯身有 Kitty 圖案。</dd>
-      <dt>使用情境</dt>
-      <dd>放在辦公桌或家裡廚房，每天喝水時都能看到喜歡的角色。</dd>
-      <dt>價格</dt>
-      <dd>參考價格 $280。</dd>
-    </dl>
+  <!-- 商品 3 -->
+  <section class="product">
+    <div class="product-text">
+      <h3>K006 Kitty 馬克杯</h3>
+      <dl>
+        <dt>尺寸</dt>
+        <dd>容量約 350 ml，早上喝牛奶或飲料都足夠。</dd>
+        <dt>材質</dt>
+        <dd>陶瓷材質，杯身有 Kitty 圖案。</dd>
+        <dt>使用情境</dt>
+        <dd>放在辦公桌或家裡廚房，每天喝水時都能看到喜歡的角色。</dd>
+        <dt>價格</dt>
+        <dd>參考價格 $280。</dd>
+      </dl>
+    </div>
+    <div class="product-img">
+      <img src="images/kitty4.jpg" alt="Kitty 馬克杯">
+    </div>
   </section>
 
   <p>
@@ -87,5 +179,6 @@
 <footer>
   <p>© 2026 婉瑜的 Kitty 小舖</p>
 </footer>
+
 </body>
 </html>
