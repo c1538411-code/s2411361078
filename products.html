@@ -1,169 +1,122 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>商品列表 - 婉瑜的 Kitty 小舖</title>
-
-  <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <title>婉瑜的 Kitty 小舖 - 商品列表</title>
   <style>
-    body { font-family: "Microsoft JhengHei", sans-serif; }
-
-    h1 {
-      color: #ff69b4;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-      letter-spacing: 2px;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 20px 0;
-    }
-
-    th, td {
-      border: 1px solid #ff69b4;
-      padding: 10px;
-      text-align: center;
-      vertical-align: middle;
-    }
-
-    th {
-      background-color: #ff69b4;
-      color: white;
-      font-weight: bold;
-    }
-
-    tr.odd  { background-color: #fff0f5; }
-    tr.even { background-color: #ffffff; }
-
-    caption {
-      caption-side: top;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #ff1493;
-      font-size: 1.3em;
-    }
-
-    .product-img {
-      width: 90px;
-      height: 90px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
+    body { font-family:"Microsoft JhengHei",sans-serif; background:#fff5fb; margin:0; }
+    header, nav, main, footer { padding:10px 20px; }
+    header { background:#ffc0dd; text-align:center; }
+    nav { background:#ffe4f2; text-align:center; }
+    nav a { margin:0 8px; text-decoration:none; color:#c2185b; }
+    nav a:hover { text-decoration:underline; }
+    h2 { color:#c2185b; }
+    table { width:100%; border-collapse:collapse; margin-top:10px; }
+    caption { font-weight:bold; margin-bottom:5px; }
+    th, td { border:1px solid #ffb6da; padding:6px; text-align:center; }
+    tr.odd { background:#fff0f7; }
+    tr.even { background:#ffffff; }
   </style>
 </head>
 <body>
-  <!-- 導覽列 -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html" style="color:#ff69b4; font-weight:bold;">🐱 婉瑜的 Kitty 小舖</a>
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
-        <li class="nav-item"><a class="nav-link active" href="products.html">商品列表</a></li>
-        <li class="nav-item"><a class="nav-link" href="detail.html">商品詳情</a></li>
-        <li class="nav-item"><a class="nav-link" href="order.html">訂購表單</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">關於小舖</a></li>
-      </ul>
-    </div>
-  </nav>
+<header>
+  <h1>商品列表</h1>
+  <p>有照片的完整商品清單，一眼看懂所有 Kitty 寶貝。</p>
+</header>
 
-  <div class="container mt-5">
-    <h1 class="text-center mb-4">完整商品清單</h1>
-    <p class="text-center">
-      下表列出目前小舖所有商品，每一樣都有照片、尺寸和價格，方便選擇。
-    </p>
+<nav>
+  <a href="index.html">首頁</a>
+  <a href="products.html">商品列表</a>
+  <a href="detail.html">商品詳情</a>
+  <a href="order.html">訂購表單</a>
+  <a href="about.html">關於小舖</a>
+</nav>
 
-    <!-- 有照片的商品資訊表 -->
-    <table>
-      <caption>婉瑜的 Kitty 小舖 - 商品資訊表</caption>
-      <thead>
-        <tr>
-          <th>照片</th>
-          <th>編號</th>
-          <th>商品名稱</th>
-          <th>尺寸 / 規格</th>
-          <th>價格</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="odd">
-          <td>
-            <img src="p1.jpg" alt="經典 Kitty 絨毛娃娃" class="product-img">
-          </td>
-          <td>001</td>
-          <td>經典 Kitty 絨毛娃娃</td>
-          <td>約 15cm，高度適中，手感柔軟</td>
-          <td>$199</td>
-        </tr>
+<main>
+  <h2>收藏全覽</h2>
+  <p>
+    這一頁提供一份完整、乾淨的商品資訊表，取代原本散落在 Line、IG、Messenger 的零碎貼文，
+    讓客人可以一眼看到目前所有商品。
+  </p>
 
-        <tr class="even">
-          <td>
-            <img src="p2.jpg" alt="Kitty 陶瓷馬克杯" class="product-img">
-          </td>
-          <td>002</td>
-          <td>Kitty 陶瓷馬克杯</td>
-          <td>350ml，可微波，加厚杯口</td>
-          <td>$150</td>
-        </tr>
+  <table>
+    <caption>婉瑜的 Kitty 商品清單</caption>
+    <thead>
+      <tr>
+        <th>編號</th>
+        <th>名稱</th>
+        <th>簡短說明</th>
+        <th>尺寸</th>
+        <th>參考價格</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="odd">
+        <td>K001</td>
+        <td>紅色 Kitty 鑰匙圈</td>
+        <td>經典紅蝴蝶結，小巧可愛。</td>
+        <td>約 3 cm</td>
+        <td>$150</td>
+      </tr>
+      <tr class="even">
+        <td>K002</td>
+        <td>粉色 Kitty 原子筆</td>
+        <td>粉紅筆桿，適合上課與記事。</td>
+        <td>約 14 cm</td>
+        <td>$120</td>
+      </tr>
+      <tr class="odd">
+        <td>K003</td>
+        <td>Kitty 小公仔</td>
+        <td>可擺桌上的小擺飾。</td>
+        <td>約 6 cm</td>
+        <td>$200</td>
+      </tr>
+      <tr class="even">
+        <td>K004</td>
+        <td>Kitty 筆記本</td>
+        <td>內頁橫線，方便書寫。</td>
+        <td>A6</td>
+        <td>$180</td>
+      </tr>
+      <tr class="odd">
+        <td>K005</td>
+        <td>Kitty 零錢包</td>
+        <td>拉鍊設計，可放卡片與零錢。</td>
+        <td>約 9×9 cm</td>
+        <td>$220</td>
+      </tr>
+      <tr class="even">
+        <td>K006</td>
+        <td>Kitty 馬克杯</td>
+        <td>適合當作早餐杯或辦公室杯子。</td>
+        <td>約 350 ml</td>
+        <td>$280</td>
+      </tr>
+      <tr class="odd">
+        <td>K007</td>
+        <td>Kitty 收納盒</td>
+        <td>可放文具、小飾品。</td>
+        <td>約 12×8×6 cm</td>
+        <td>$260</td>
+      </tr>
+      <tr class="even">
+        <td>K008</td>
+        <td>Kitty 手提袋</td>
+        <td>外出購物或上課都方便。</td>
+        <td>約 30×25 cm</td>
+        <td>$320</td>
+      </tr>
+    </tbody>
+  </table>
 
-        <tr class="odd">
-          <td>
-            <img src="p3.jpg" alt="Kitty 大抱枕" class="product-img">
-          </td>
-          <td>003</td>
-          <td>Kitty 大抱枕</td>
-          <td>40×40cm，附可拆洗抱枕套</td>
-          <td>$380</td>
-        </tr>
+  <p>
+    客人可以先在這裡比對名稱、規格與價格，再記下想要的編號，之後到訂購表單頁填寫。
+  </p>
+</main>
 
-        <tr class="even">
-          <td>
-            <img src="p4.jpg" alt="Kitty 手機殼" class="product-img">
-          </td>
-          <td>004</td>
-          <td>Kitty 手機殼</td>
-          <td>iPhone 15，用硬殼＋軟邊設計</td>
-          <td>$250</td>
-        </tr>
-
-        <tr class="odd">
-          <td>
-            <img src="p5.jpg" alt="Kitty 鑰匙圈" class="product-img">
-          </td>
-          <td>005</td>
-          <td>Kitty 鑰匙圈</td>
-          <td>5cm 吊飾，金屬扣環</td>
-          <td>$80</td>
-        </tr>
-
-        <tr class="even">
-          <td>
-            <img src="p6.jpg" alt="Kitty 帆布袋" class="product-img">
-          </td>
-          <td>006</td>
-          <td>Kitty 帆布袋</td>
-          <td>35×40cm，厚帆布，可肩背</td>
-          <td>$220</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="5" style="text-align:center; font-weight:bold; color:#ff1493;">
-            ※ 圖片僅供參考，以實際出貨為準；價格如有調整會在訂購回信中說明。
-          </td>
-        </tr>
-      </tfoot>
-    </table>
-
-    <div class="text-center mt-4">
-      <a href="order.html" class="btn btn-lg" style="background-color:#ff69b4; color:white;">
-        我要訂購 →
-      </a>
-    </div>
-  </div>
+<footer>
+  <p>© 2026 婉瑜的 Kitty 小舖</p>
+</footer>
 </body>
 </html>
