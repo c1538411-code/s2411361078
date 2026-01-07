@@ -2,41 +2,57 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>婉瑜的 Kitty 小舖 - 商品列表</title>
   <style>
     body { font-family:"Microsoft JhengHei",sans-serif; background:#fff5fb; margin:0; }
-    header, nav, main, footer { padding:10px 20px; }
-    header { background:#ffc0dd; text-align:center; }
-    nav { background:#ffe4f2; text-align:center; }
-    nav a { margin:0 8px; text-decoration:none; color:#c2185b; }
-    nav a:hover { text-decoration:underline; }
-    h2 { color:#c2185b; }
-    table { width:100%; border-collapse:collapse; margin-top:10px; }
-    caption { font-weight:bold; margin-bottom:5px; }
-    th, td { border:1px solid #ffb6da; padding:6px; text-align:center; }
+
+    header { background:#ffc0dd; text-align:center; padding:22px 20px; border-bottom:3px solid #ff8db8; }
+    header h1 { margin:0; color:#c2185b; font-size:32px; }
+    header p { margin:10px 0 0; color:#7a2a4a; font-size:14px; }
+
+    nav { background:#ffe4f2; text-align:center; padding:12px 10px; border-bottom:2px solid #ffb1cf; }
+    nav a { display:inline-block; background:#ffd0e5; color:#c2185b; text-decoration:none; padding:10px 18px; margin:0 6px;
+            border:1px solid #ff8db8; border-radius:6px; font-weight:bold; font-size:14px; }
+    nav a:hover { background:#ffb7d4; }
+    nav a.active { background:#ff8db8; color:#fff; }
+
+    main { max-width:980px; margin:0 auto; padding:30px 20px 60px; }
+    h2 { color:#c2185b; margin:0 0 10px; }
+    hr.line { border:none; border-top:2px solid #ffb1cf; margin:12px 0 18px; }
+
+    table { width:100%; border-collapse:collapse; margin-top:10px; background:#fff; }
+    caption { font-weight:bold; color:#c2185b; margin-bottom:10px; }
+    th, td { border:1px solid #ffb6da; padding:10px 8px; text-align:center; }
+    th { background:#ffd0e5; }
     tr.odd { background:#fff0f7; }
     tr.even { background:#ffffff; }
+
+    footer { background:#ffc0dd; border-top:3px solid #ff8db8; padding:14px 20px; font-size:13px; color:#6b2b47; }
   </style>
 </head>
 <body>
+
 <header>
-  <h1>商品列表</h1>
-  <p>有照片的完整商品清單，一眼看懂所有 Kitty 寶貝。</p>
+  <h1>婉瑜的 Kitty 小舖</h1>
+  <p>收集 10 年，分享我的 Kitty 小世界。</p>
 </header>
 
 <nav>
   <a href="index.html">首頁</a>
-  <a href="products.html">商品列表</a>
+  <a class="active" href="products.html">商品列表</a>
   <a href="detail.html">商品詳情</a>
   <a href="order.html">訂購表單</a>
   <a href="about.html">關於小舖</a>
 </nav>
 
 <main>
-  <h2>收藏全覽</h2>
+  <h2>商品列表：我的 Kitty 收藏</h2>
+  <hr class="line">
+
   <p>
-    這一頁提供一份完整、乾淨的商品資訊表，取代原本散落在 Line、IG、Messenger 的零碎貼文，
-    讓客人可以一眼看到目前所有商品。
+    下面是目前整理好的所有 Kitty 商品，每個商品都有編號、名稱、尺寸與參考價格。
+    如果對某些商品有興趣，可以到「商品詳情」頁面查看更完整介紹。
   </p>
 
   <table>
@@ -51,72 +67,21 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="odd">
-        <td>K001</td>
-        <td>紅色 Kitty 鑰匙圈</td>
-        <td>經典紅蝴蝶結，小巧可愛。</td>
-        <td>約 3 cm</td>
-        <td>$150</td>
-      </tr>
-      <tr class="even">
-        <td>K002</td>
-        <td>粉色 Kitty 原子筆</td>
-        <td>粉紅筆桿，適合上課與記事。</td>
-        <td>約 14 cm</td>
-        <td>$120</td>
-      </tr>
-      <tr class="odd">
-        <td>K003</td>
-        <td>Kitty 小公仔</td>
-        <td>可擺桌上的小擺飾。</td>
-        <td>約 6 cm</td>
-        <td>$200</td>
-      </tr>
-      <tr class="even">
-        <td>K004</td>
-        <td>Kitty 筆記本</td>
-        <td>內頁橫線，方便書寫。</td>
-        <td>A6</td>
-        <td>$180</td>
-      </tr>
-      <tr class="odd">
-        <td>K005</td>
-        <td>Kitty 零錢包</td>
-        <td>拉鍊設計，可放卡片與零錢。</td>
-        <td>約 9×9 cm</td>
-        <td>$220</td>
-      </tr>
-      <tr class="even">
-        <td>K006</td>
-        <td>Kitty 馬克杯</td>
-        <td>適合當作早餐杯或辦公室杯子。</td>
-        <td>約 350 ml</td>
-        <td>$280</td>
-      </tr>
-      <tr class="odd">
-        <td>K007</td>
-        <td>Kitty 收納盒</td>
-        <td>可放文具、小飾品。</td>
-        <td>約 12×8×6 cm</td>
-        <td>$260</td>
-      </tr>
-      <tr class="even">
-        <td>K008</td>
-        <td>Kitty 手提袋</td>
-        <td>外出購物或上課都方便。</td>
-        <td>約 30×25 cm</td>
-        <td>$320</td>
-      </tr>
+      <tr class="odd"><td>K001</td><td>紅色 Kitty 鑰匙圈</td><td>經典紅蝴蝶結，小巧可愛。</td><td>約 3 cm</td><td>$150</td></tr>
+      <tr class="even"><td>K002</td><td>粉色 Kitty 原子筆</td><td>粉紅筆桿，適合上課與記事。</td><td>約 14 cm</td><td>$120</td></tr>
+      <tr class="odd"><td>K003</td><td>Kitty 小公仔</td><td>可擺桌上的小擺飾。</td><td>約 6 cm</td><td>$200</td></tr>
+      <tr class="even"><td>K004</td><td>Kitty 筆記本</td><td>內頁橫線，方便書寫。</td><td>A6</td><td>$180</td></tr>
+      <tr class="odd"><td>K005</td><td>Kitty 零錢包</td><td>拉鍊設計，可放卡片與零錢。</td><td>約 9×9 cm</td><td>$220</td></tr>
+      <tr class="even"><td>K006</td><td>Kitty 馬克杯</td><td>適合當作早餐杯或辦公室杯子。</td><td>約 350 ml</td><td>$280</td></tr>
+      <tr class="odd"><td>K007</td><td>Kitty 收納盒</td><td>可放文具、小飾品。</td><td>約 12×8×6 cm</td><td>$260</td></tr>
+      <tr class="even"><td>K008</td><td>Kitty 手提袋</td><td>外出購物或上課都方便。</td><td>約 30×25 cm</td><td>$320</td></tr>
     </tbody>
   </table>
-
-  <p>
-    客人可以先在這裡比對名稱、規格與價格，再記下想要的編號，之後到訂購表單頁填寫。
-  </p>
 </main>
 
 <footer>
-  <p>© 2026 婉瑜的 Kitty 小舖</p>
+  © 2026 婉瑜的 Kitty 小舖｜用心收藏，細心分享
 </footer>
+
 </body>
 </html>
