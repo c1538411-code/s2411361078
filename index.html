@@ -4,62 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>婉瑜的 Kitty 小舖 - 首頁</title>
-
   <style>
-    body {
-      font-family: "Microsoft JhengHei", sans-serif;
-      background: #fff5fb;
-      margin: 0;
-    }
+    body { font-family:"Microsoft JhengHei", sans-serif; background:#fff5fb; margin:0; }
 
-    header, nav, main, footer {
-      padding: 10px 20px;
-    }
+    header { background:#ffc0dd; text-align:center; padding:22px 20px; border-bottom:3px solid #ff8db8; }
+    header h1 { margin:0; color:#c2185b; font-size:32px; letter-spacing:1px; }
+    header p { margin:10px 0 0; color:#7a2a4a; font-size:14px; }
 
-    header {
-      background: #ffc0dd;
-      text-align: center;
-    }
+    nav { background:#ffe4f2; text-align:center; padding:12px 10px; border-bottom:2px solid #ffb1cf; }
+    nav a { display:inline-block; background:#ffd0e5; color:#c2185b; text-decoration:none; padding:10px 18px; margin:0 6px;
+            border:1px solid #ff8db8; border-radius:6px; font-weight:bold; font-size:14px; }
+    nav a:hover { background:#ffb7d4; }
+    nav a.active { background:#ff8db8; color:#fff; }
 
-    nav {
-      background: #ffe4f2;
-      text-align: center;
-    }
+    main { max-width:980px; margin:0 auto; padding:30px 20px 60px; }
+    h2 { color:#c2185b; margin:0 0 10px; }
+    hr.line { border:none; border-top:2px solid #ffb1cf; margin:12px 0 18px; }
 
-    nav a {
-      margin: 0 8px;
-      text-decoration: none;
-      color: #c2185b;
-    }
+    .hero { text-align:center; margin:10px 0 24px; }
+    .hero img { max-width:100%; height:auto; border-radius:12px; border:1px solid #ffb1cf; background:#fff; }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    h2 {
-      color: #c2185b;
-    }
-
-    /* ⭐ 首頁 Kitty 橫幅 */
-    .hero {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .hero img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }
-
-    footer {
-      text-align: center;
-      background: #ffc0dd;
-      font-size: 14px;
-    }
+    footer { background:#ffc0dd; border-top:3px solid #ff8db8; padding:14px 20px; font-size:13px; color:#6b2b47; }
   </style>
 </head>
-
 <body>
 
 <header>
@@ -68,7 +35,7 @@
 </header>
 
 <nav>
-  <a href="index.html">首頁</a>
+  <a class="active" href="index.html">首頁</a>
   <a href="products.html">商品列表</a>
   <a href="detail.html">商品詳情</a>
   <a href="order.html">訂購表單</a>
@@ -76,41 +43,33 @@
 </nav>
 
 <main>
-
-  <!-- ⭐ Kitty 橫幅圖片 -->
   <div class="hero">
-    <img src="images/kitty1.jpg" alt="Hello Kitty 小舖橫幅圖">
+    <img src="images/kitty1.jpg" alt="Kitty 橫幅圖">
   </div>
 
-  <h2>歡迎光臨</h2>
-  <p>
-    這裡是一個專門分享 Hello Kitty 相關小物的小舖，
-    鑰匙圈、文具、玩偶都是店主珍藏多年的寶貝。
-  </p>
+  <h2>歡迎光臨婉瑜的 Kitty 小舖</h2>
+  <hr class="line">
 
+  <p>這裡是一個專門分享 Hello Kitty 相關小物的小舖，鑰匙圈、文具、玩偶都是店主珍藏多年的寶貝。</p>
   <p>
-    建立這個網站，是希望把收藏整理成一個完整的空間，
-    方便自己記錄、也方便朋友欣賞；
-    未來如果要販賣商品，也可以直接把這個網站
-    當成簡單的賣場使用。
+    建立這個網站，是希望把收藏整理成一個完整的空間，方便自己記錄、也方便朋友欣賞；
+    未來如果要販賣商品，也可以直接把這個網站當成簡單的賣場使用。
   </p>
 
   <h2>從這裡開始逛小舖</h2>
-  <p>
-    上面的導覽列可以帶你前往不同頁面：
-  </p>
+  <hr class="line">
 
+  <p>上面的導覽列可以帶你前往不同頁面：</p>
   <ul>
     <li>「商品列表」：一次看到目前所有商品與基本資訊。</li>
     <li>「商品詳情」：欣賞主打商品的大照片與詳細介紹。</li>
     <li>「訂購表單」：想帶回家的時候，可以在線上填寫需求。</li>
     <li>「關於小舖」：了解小舖的背景故事與購買流程。</li>
   </ul>
-
 </main>
 
 <footer>
-  <p>© 2026 婉瑜的 Kitty 小舖</p>
+  © 2026 婉瑜的 Kitty 小舖｜用心收藏，細心分享
 </footer>
 
 </body>
