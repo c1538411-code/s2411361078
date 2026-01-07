@@ -1,161 +1,99 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>訂購表單 - 婉瑜的 Kitty 小舖</title>
-
-  <!-- Bootstrap 5（老師用的 CDN） -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <title>婉瑜的 Kitty 小舖 - 訂購表單</title>
   <style>
-    body { font-family: "Microsoft JhengHei", sans-serif; }
-
-    h1 {
-      color: #ff69b4;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-      letter-spacing: 2px;
+    body { font-family:"Microsoft JhengHei",sans-serif; background:#fff5fb; margin:0; }
+    header, nav, main, footer { padding:10px 20px; }
+    header { background:#ffc0dd; text-align:center; }
+    nav { background:#ffe4f2; text-align:center; }
+    nav a { margin:0 8px; text-decoration:none; color:#c2185b; }
+    nav a:hover { text-decoration:underline; }
+    h2 { color:#c2185b; }
+    form { background:#ffffff; border:1px solid #ffb6da; padding:10px; max-width:500px; margin:10px auto; }
+    label { display:inline-block; width:90px; }
+    input[type="text"], input[type="email"], input[type="number"], select, textarea {
+      width:60%; margin-bottom:6px;
     }
-
-    .form-label { font-weight: bold; color: #ff1493; }
-
-    .form-control, select, textarea {
-      border: 2px solid #ffb6c1;
-    }
-
-    .btn-submit {
-      background-color: #ff1493;
-      color: white;
-      font-size: 1.1em;
-      padding: 10px 30px;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 20px 0;
-    }
-
-    th, td {
-      border: 1px solid #ff69b4;
-      padding: 8px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #ff69b4;
-      color: white;
-    }
-
-    tr.odd  { background-color: #fff0f5; }
-    tr.even { background-color: #ffffff; }
-
-    caption {
-      caption-side: top;
-      font-weight: bold;
-      margin-bottom: 8px;
-      color: #ff1493;
-    }
+    textarea { height:60px; }
+    .btns { text-align:center; margin-top:10px; }
   </style>
+  <script>
+    function checkForm() {
+      var n = document.getElementById("name").value;
+      var e = document.getElementById("email").value;
+      if (n === "" || e === "") {
+        alert("請填寫姓名與 Email 喔！");
+        return false;
+      }
+      return true;
+    }
+  </script>
 </head>
 <body>
-  <!-- 導覽列（跟其他頁一樣即可） -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html" style="color:#ff69b4; font-weight:bold;">🐱 婉瑜的 Kitty 小舖</a>
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
-        <li class="nav-item"><a class="nav-link" href="products.html">商品列表</a></li>
-        <li class="nav-item"><a class="nav-link" href="detail.html">商品詳情</a></li>
-        <li class="nav-item"><a class="nav-link active" href="order.html">訂購表單</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">關於小舖</a></li>
-      </ul>
-    </div>
-  </nav>
+<header>
+  <h1>訂購表單</h1>
+  <p>在線上勾選想要的商品，填好資料一次送出。</p>
+</header>
 
-  <div class="container mt-5">
-    <h1 class="text-center mb-4">訂購 / 詢問表單</h1>
-    <p class="text-center">
-      請先勾選想購買的商品，填寫數量後，再填寫下方聯絡資料，按送出即可。
+<nav>
+  <a href="index.html">首頁</a>
+  <a href="products.html">商品列表</a>
+  <a href="detail.html">商品詳情</a>
+  <a href="order.html">訂購表單</a>
+  <a href="about.html">關於小舖</a>
+</nav>
+
+<main>
+  <h2>填寫訂購需求</h2>
+  <p>
+    客人可以在網站上勾選想購買的商品與數量，留下基本聯絡方式，
+    一次送出，不用再透過多次私訊詢問。
+  </p>
+
+  <form onsubmit="return checkForm();">
+    <p>
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name">
     </p>
+    <p>
+      <label for="email">Email：</label>
+      <input type="email" id="email" name="email">
+    </p>
+    <p>
+      <label for="item">商品編號：</label>
+      <select id="item" name="item">
+        <option value="K001">K001 紅色 Kitty 鑰匙圈</option>
+        <option value="K002">K002 粉色 Kitty 原子筆</option>
+        <option value="K003">K003 Kitty 小公仔</option>
+        <option value="K006">K006 Kitty 馬克杯</option>
+      </select>
+    </p>
+    <p>
+      <label for="qty">數量：</label>
+      <input type="number" id="qty" name="qty" value="1" min="1">
+    </p>
+    <p>
+      <span style="display:inline-block;width:90px;">付款方式：</span>
+      <input type="radio" id="pay1" name="pay" value="轉帳" checked>
+      <label for="pay1">轉帳</label>
+      <input type="radio" id="pay2" name="pay" value="面交">
+      <label for="pay2">面交</label>
+    </p>
+    <p>
+      <label for="memo">備註：</label>
+      <textarea id="memo" name="memo"></textarea>
+    </p>
+    <div class="btns">
+      <input type="submit" value="送出訂購">
+      <input type="reset" value="重新填寫">
+    </div>
+  </form>
+</main>
 
-    <!-- 訂購表單開始 -->
-    <form action="#" method="post" onsubmit="return validateForm()">
-
-      <!-- 商品區：每個商品有自己的數量 -->
-      <table>
-        <caption>請勾選想購買的商品與數量</caption>
-        <thead>
-          <tr>
-            <th>選擇</th>
-            <th>商品名稱</th>
-            <th>價格</th>
-            <th>數量</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="odd">
-            <td><input type="checkbox" name="p1_checked"></td>
-            <td>001 經典 Kitty 絨毛娃娃</td>
-            <td>$199</td>
-            <td><input type="number" name="p1_qty" min="0" value="0"></td>
-          </tr>
-          <tr class="even">
-            <td><input type="checkbox" name="p2_checked"></td>
-            <td>002 Kitty 陶瓷馬克杯</td>
-            <td>$150</td>
-            <td><input type="number" name="p2_qty" min="0" value="0"></td>
-          </tr>
-          <tr class="odd">
-            <td><input type="checkbox" name="p3_checked"></td>
-            <td>003 Kitty 大抱枕</td>
-            <td>$380</td>
-            <td><input type="number" name="p3_qty" min="0" value="0"></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- 聯絡資訊 -->
-      <div class="row g-3 mt-4">
-        <div class="col-md-6">
-          <label class="form-label">* 姓名</label>
-          <input type="text" class="form-control" name="name">
-        </div>
-
-        <div class="col-md-6">
-          <label class="form-label">* 電子郵件</label>
-          <input type="email" class="form-control" name="email">
-        </div>
-
-        <div class="col-md-6">
-          <label class="form-label">聯絡電話</label>
-          <input type="text" class="form-control" name="phone">
-        </div>
-
-        <div class="col-md-6">
-          <label class="form-label">付款方式</label><br>
-          <input type="radio" id="pay1" name="payment" value="transfer">
-          <label for="pay1">銀行匯款</label>
-          &nbsp;&nbsp;
-          <input type="radio" id="pay2" name="payment" value="meetup">
-          <label for="pay2">台中面交</label>
-        </div>
-
-        <div class="col-12">
-          <label class="form-label">備註（選填）</label>
-          <textarea class="form-control" name="message" rows="4"
-            placeholder="例如：希望什麼時候取貨、顏色需求…"></textarea>
-        </div>
-
-        <div class="col-12 text-center mt-4">
-          <input type="submit" value="送出訂單" class="btn btn-submit me-3">
-          <input type="reset" value="重新填寫" class="btn btn-secondary">
-        </div>
-      </div>
-    </form>
-  </div>
-
-  <!-- 連結到老師等級的簡單 JS 驗證 -->
-  <script src="01.js"></script>
+<footer>
+  <p>© 2026 婉瑜的 Kitty 小舖</p>
+</footer>
 </body>
 </html>
